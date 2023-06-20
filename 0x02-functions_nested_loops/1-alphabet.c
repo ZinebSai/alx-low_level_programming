@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * main - prints the alphapets in lowercase followed by a new line.
- * return : always 0 (Success)
+ * print_alphabet - prints the alphapets in lowercase followed by a new line.
+ * return : nothing.
  */
 void print_alphabet(void)
 {
