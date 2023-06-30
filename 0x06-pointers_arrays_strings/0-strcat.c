@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncat - concatenate two strings.
+ * _strcat - concatenate two strings.
  * @dest: string with concatenation
  * @src: string to be concatenated
  * Return: Always 0.
