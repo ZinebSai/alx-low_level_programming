@@ -1,55 +1,57 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
- * infinite_add 2 numbers.
+ * infinite_add - add 2 numbers.
  * @n1: number1.
  * @n2: number2.
  * @r: buffer
  * @size_r: buffer size
  * Return: String .
  */
+
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int a = 0, b = 0, c = 0, d, e, S, big;
+	int d = 0, e = 0, c = 0, a, b, sum, big;	
 	
-	while (n1[a] != '\0')
-		a++;
-	while (n2[b] != '\0')
-		b++;
-	if (a > b)
-		big = a;
+	while (n1[d] != '\0')
+		d++;
+	while (n2[e] != '\0')
+		e++;
+	if (d > e)
+		big = d;
 	else
-		big = b;
+		big = e;
 	if ((big + 1) >= size_r)
 		return (0);
 	r[big + 1] = '\0';
 	
 	while (big >= 0)
 	{
-		d = (n1[a - 1] - '0');
-		e = (n1[b - 1] - '0');
-		if (a > 0 && b > 0)
-			S = d + e + c;
-		else if (a < 0 && b > 0)
-			S = e + c;
-		else if (a > 0 && b < 0)
-			S = d + c;
+		a = (n1[d - 1] - '0');
+		b = (n1[e - 1] - '0');
+		if (d > 0 && e > 0)
+			sum = a + b + c;
+		else if (d < 0 && e > 0)
+			sum = b + c;
+		else if (d > 0 && e < 0)
+			sum = a + c;
 		else
-			S = c;
+			sum = c;
 		
-		if (S > 9)
+		if (sum > 9)
 		{
-			c = S / 10;
-			S = (S % 10) + '0';
+			c = sum / 10;
+			sum = (sum % 10) + '0';
 		}
 		else
 		{
 			c = 0;
-			S = S + '0';
+			sum = sum + '0';
 		}
-		r[big] = S;
-		a--;
-		b--;
+		r[big] = sum;
+		d--;
+		e--;
 		big--;
 	}
 	if (*(r) != 0)
