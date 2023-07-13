@@ -6,7 +6,7 @@
 * @min: smallest nmbr
 * @max: lagrest nmbr
 *
-* Return: pointer 
+* Return: pointer
 */
 
 int *array_range(int min, int max)

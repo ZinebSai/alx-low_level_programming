@@ -1,11 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
+
 /**
 * _calloc - allocate memory using malloc and initialize it to zero
 *@nmemb: number of elements
-*@size: size of the memory 
+*@size: size of the memory
 *
-*Return: poiner 
+*Return: poiner
 */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
