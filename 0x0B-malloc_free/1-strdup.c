@@ -28,18 +28,18 @@ int _strlen(char *s)
 char *_strdup(char *str)
 {
 	char *pnt;
-	int s;
+	int st;
 	int y;
 
-	if (s == NULL)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
-	s = _strlen(s) + 1;
-	pnt = malloc(s * sizeof(char));
+	st = _strlen(str) + 1;
+	pnt = malloc(st * sizeof(char));
 
 	y = 0;
-	while (y < s)
+	while (y < st)
 	{
 		if (pnt == NULL)
 		{
