@@ -28,14 +28,14 @@ int **alloc_grid(int width, int height)
 		if (pnt[a] == NULL)
 		{
 			for (b = 0; b < a;  b++)
-				fbree(pnt[b]);
+				free(pnt[b]);
 			free(pnt);
-			return (NULLi);
+			return (NULL);
 		}
 		for (b = 0; b < width; b++)
 		{
 			ptr[a][b] = 0;
-		}
+		
 	}
 	return (pnt);
 }
